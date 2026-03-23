@@ -1,10 +1,14 @@
 from pages.login_page import LoginPage
-from config.config import USERNAME, PASSWORD
+from pages.dashboard_page import DashboardPage
+from config.config import USERNAME, PASSWORD, BASE_URL
 import time
 
 def test_open_page(driver):
     login = LoginPage(driver)
-    login.open()
+    dashboard = DashboardPage(driver)
+
+
+    login.open(BASE_URL)
     login.enter_username(USERNAME)
     login.enter_pass(PASSWORD)
     login.click_login()
