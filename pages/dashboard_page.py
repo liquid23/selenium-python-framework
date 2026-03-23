@@ -7,7 +7,7 @@ class DashboardPage:
 
     def __init__(self, driver):
         self.driver = driver
-        self.wait = WebDriverWait(driver=10)
+        self.wait = WebDriverWait(driver, 10)
 
 
     dashboard_heading = (By.XPATH, "//h6[text()='Dashboard']")
