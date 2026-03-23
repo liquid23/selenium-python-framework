@@ -8,7 +8,7 @@ def test_open_page(driver):
     dashboard = DashboardPage(driver)
 
 
-    login.open(BASE_URL)
+    login.open()
     login.enter_username(USERNAME)
     login.enter_pass(PASSWORD)
     login.click_login()
